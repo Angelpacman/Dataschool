@@ -12,10 +12,11 @@ import pandas as pd
 # In[3]:
 
 
-#pd.read_table puede leer una tabla pero se necesita csv para poder hacerlo con un 
-#archivo qeu esta separado por comas
+# pd.read_table puede leer una tabla pero se necesita csv para poder hacerlo con un
+# archivo que esta separado por comas
 
-ufo = pd.read_csv("https://bit.ly/uforeports")
+# ufo = pd.read_csv("https://bit.ly/uforeports")
+ufo = pd.read_csv("uforeports.csv")
 
 
 # In[4]:
@@ -58,7 +59,7 @@ ufo.shape
 # In[13]:
 
 
-ufo.head
+ufo.head()
 
 
 # In[14]:
@@ -69,9 +70,11 @@ ufo.head
 
 
 # In[15]:
-
+reports
 
 ufo.City + ufo.State
+(ufo.City + ufo.State).head()
+
 
 
 # In[18]:
@@ -85,4 +88,3 @@ ufo['Location'] = ufo.City + ufo.State
 
 
 ufo.head()
-

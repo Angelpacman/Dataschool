@@ -12,7 +12,9 @@ import pandas as pd
 # In[32]:
 
 
-drinks = pd.read_csv('http://bit.ly/drinksbycountry')
+# drinks = pd.read_csv('http://bit.ly/drinksbycountry')
+drinks = pd.read_csv('drinks.csv')
+
 drinks
 
 
@@ -133,7 +135,3 @@ drinks
 # - Hay que tener cuidado con esta asignacion, debido a que se declara que una columna va a ser parte del df que ya teniamos, esta columna se mantendra en el df hasta que sea removida
 
 # In[ ]:
-
-
-
-

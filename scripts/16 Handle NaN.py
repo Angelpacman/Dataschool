@@ -12,16 +12,18 @@ import pandas as pd
 # In[4]:
 
 
-ufo=pd.read_csv('https://bit.ly/uforeports')
+# ufo=pd.read_csv('https://bit.ly/uforeports')
+ufo=pd.read_csv('uforeports.csv')
+
 ufo.head()
 ufo.tail()
 
 
 #    NaN significa not available number, por alguna razón, algunos set de datos no tienen el valor en el data set de alguna fila de algun campo. intentaremos trabajar con ello.
-#     
+#
 #    Para eso podomos usar la funcion isnull(), la cual se encarga se arrojar series de booleanos que nos permitan hacer un filtro y tomar como verdaderos los valores que son NaN, su contraparte es la funcion notnull() que se encarga de hacer lo propio con LOS VALORES QUE NO SEAN NaN.
-#     
-#    Por último hay que agregar que para la version de pandas 0.21 (octubre 2017) las funciones que se agregan son isna() y notna() que funcionan como las librerias de null. 
+#
+#    Por último hay que agregar que para la version de pandas 0.21 (octubre 2017) las funciones que se agregan son isna() y notna() que funcionan como las librerias de null.
 
 # In[5]:
 
@@ -78,7 +80,7 @@ ufo.City.isna()
 
 
 # Usando esa serie de booleanos para filtrar en el data set y quedarnos con las vilas que tienen el valor True de esta serie:
-# 
+#
 
 # In[20]:
 
@@ -103,7 +105,7 @@ ufo.dropna(how='any').shape
 # Con esto nos podemos dar cuenta que el tamaño del data set de ha reducido de manerea significativa, pasó de tener 18241 filas a tan solo 2486
 
 # La funcion anterior para quitar los valores nulos es bastante agresiva debido a que quita cualquier fila que tenga un valor nulo en cualquiera de los campos
-# 
+#
 # Una opción aun mas especifica y menos agresiva con el recorte de los datos es cambier la opción any por all, lo que va a resultar en que los recortes de las filas solo se han de efectuar si la fila tiene NaN en todos los campos.
 
 # In[26]:
@@ -130,8 +132,8 @@ ufo.dropna(subset=['City', 'Shape Reported'], how="any")
 ufo.dropna(subset=['City', 'Shape Reported'], how="all")
 
 
-# ### value_counts() con valores NaN 
-# 
+# ### value_counts() con valores NaN
+#
 # Los valores NaN no son tomados en cuenta a la hora de hacer un conteo de variables unicas en los campos. asi que si hay valores faltantes en una columna no seran tomados en cuenta para el conteo
 
 # In[30]:
@@ -160,7 +162,3 @@ ufo['Shape Reported'].value_counts()
 #    Como puedes ver al transformar los valores de NaN en VARIOUS se sumaron a los valores de VARIOUS que ya existian, lo que hace que se pongan a la cabeza en la función de conteo
 
 # In[ ]:
-
-
-
-

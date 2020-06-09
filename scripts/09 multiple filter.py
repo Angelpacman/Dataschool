@@ -12,7 +12,8 @@ import pandas as pd
 # In[3]:
 
 
-movies = pd.read_csv('http://bit.ly/imdbratings')
+# movies = pd.read_csv('http://bit.ly/imdbratings')
+movies = pd.read_csv('imdbratings.csv')
 movies.head()
 
 
@@ -86,7 +87,3 @@ movies[movies.genre.isin(['Crime', 'Drama', 'Action'])]
 
 
 # In[ ]:
-
-
-
-

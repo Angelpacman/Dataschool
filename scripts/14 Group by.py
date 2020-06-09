@@ -12,7 +12,8 @@ import pandas as pd
 # In[10]:
 
 
-drinks = pd.read_csv('http://bit.ly/drinksbycountry')
+# drinks = pd.read_csv('http://bit.ly/drinksbycountry')
+drinks = pd.read_csv('drinks.csv')
 drinks.head()
 
 
@@ -98,7 +99,3 @@ drinks.shape
 
 
 # In[ ]:
-
-
-
-

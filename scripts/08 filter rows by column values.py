@@ -12,7 +12,8 @@ import pandas as pd
 # In[3]:
 
 
-movies = pd.read_csv('http://bit.ly/imdbratings')
+# movies = pd.read_csv('http://bit.ly/imdbratings')
+movies = pd.read_csv('imdbratings.csv')
 movies.head()
 
 
@@ -22,7 +23,10 @@ movies.head()
 movies.shape
 
 
-# Vamos a suponer que queremos solo las filas que tienen una duracion alta, entonces para ello vamos a crear una lista de python que contengan lo que nosotros queremos, despues lo pasamos como argumento a las filas y se quedaran las filas que cumlan con nuestra condicion:
+# Vamos a suponer que queremos solo las filas que tienen una duracion alta, entonces
+# para ello vamos a crear una lista de python que contengan lo que nosotros queremos,
+# despues lo pasamos como argumento a las filas y se quedaran las filas que cumlan con
+# nuestra condicion:
 
 # In[5]:
 
@@ -33,7 +37,7 @@ for length in movies.duration:  #comprueba su pasa lo mismo con movies['duration
         booleans.append(True)
     else:
         booleans.append(False)
-            
+
 
 
 # In[6]:
@@ -105,7 +109,3 @@ movies.loc[movies.duration >= 200,'genre']
 
 
 # In[ ]:
-
-
-
-

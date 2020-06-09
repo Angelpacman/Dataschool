@@ -12,7 +12,8 @@ import pandas as pd
 # In[2]:
 
 
-ufo = pd.read_csv('http://bit.ly/uforeports')
+# ufo = pd.read_csv('http://bit.ly/uforeports')
+ufo = pd.read_csv('uforeports.csv')
 ufo
 
 
@@ -31,7 +32,3 @@ ufo.loc[:,"City"]
 
 
 # In[ ]:
-
-
-
-

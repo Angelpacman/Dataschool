@@ -12,7 +12,8 @@ import pandas as pd
 # In[21]:
 
 
-drinks = pd.read_csv('http://bit.ly/drinksbycountry')
+# drinks = pd.read_csv('http://bit.ly/drinksbycountry')
+drinks = pd.read_csv('drinks.csv')
 drinks.head()
 
 
@@ -22,11 +23,13 @@ drinks.head()
 drinks.shape
 
 
-# La forma en que se puede eliminar una fila o columna es con la funcion drop(), pero que la funcion sepa que es lo que queremos quitar del df debemos asignar valor a la opcion "axis", a grandes rasgos;
-# 
+# La forma en que se puede eliminar una fila o columna es con la funcion drop(),
+# pero que la funcion sepa que es lo que queremos quitar del df debemos asignar valor
+# a la opcion "axis", a grandes rasgos;
+#
 # para eliminar filas:
 # axis = 0
-# 
+#
 # para eliminar columnas:
 # axis = 1
 
@@ -97,7 +100,3 @@ drinks.head()
 
 
 # In[ ]:
-
-
-
-

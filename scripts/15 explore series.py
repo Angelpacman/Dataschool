@@ -12,7 +12,8 @@ import pandas as pd
 # In[4]:
 
 
-movies = pd.read_csv('https://bit.ly/imdbratings')
+# movies = pd.read_csv('https://bit.ly/imdbratings')
+movies = pd.read_csv('imdbratings.csv')
 movies.head()
 
 
@@ -137,7 +138,3 @@ pd.crosstab(movies['genre'][:], movies.content_rating)
 
 
 # In[ ]:
-
-
-
-

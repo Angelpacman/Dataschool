@@ -12,7 +12,8 @@ import pandas as pd
 # In[17]:
 
 
-ufo = pd.read_csv('https://bit.ly/uforeports')
+# ufo = pd.read_csv('https://bit.ly/uforeports')
+ufo = pd.read_csv('uforeports.csv')
 
 
 # In[18]:
@@ -41,7 +42,8 @@ ufo.drop(['City', 'State'], axis=1, inplace=True)
 ufo.head()
 
 
-# Remover filas en lugar de columnas, esto requiere de ubicar el numero de filas que queremos fuera:
+# Remover filas en lugar de columnas, esto requiere de ubicar el numero de filas que
+# queremos fuera:
 
 # In[23]:
 
@@ -56,10 +58,7 @@ ufo.head()
 ufo.shape
 
 
-# Como te puedes dar cuenta el axis se definio como 0, para que se pueda trabajar sobre las filas, con la lista que le pasamos a ufo.drop() pudimos quitar las 2 peimeras filas
+# Como te puedes dar cuenta el axis se definio como 0, para que se pueda trabajar sobre las filas,
+# con la lista que le pasamos a ufo.drop() pudimos quitar las 2 peimeras filas
 
 # In[ ]:
-
-
-
-
